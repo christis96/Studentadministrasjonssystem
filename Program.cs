@@ -48,6 +48,12 @@ class Program
         Console.WriteLine(student.SkrivUtGjennomsnitt());
         Console.WriteLine(student2.SkrivUtGjennomsnitt());
         
+        int poeng = student.TotaltStudiepoeng();
+        Console.WriteLine($"Totalt studiepoeng: {poeng} for {student.Navn}");
+        
+        int poeng2 = student2.TotaltStudiepoeng();
+        Console.WriteLine($"Totalt studiepoeng: {poeng2} for {student2.Navn}");
+        
 
     }
 }

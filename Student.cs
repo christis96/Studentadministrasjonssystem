@@ -56,4 +56,13 @@ public class Student
 
              return tallTilBokstav[avrundet];
          }
+    public int TotaltStudiepoeng()
+    {
+        int sum = 0;
+        foreach (var fag in FagListe)
+        {
+            sum += fag.Studiepoeng;
+        }
+        return sum;
+    }
 }
