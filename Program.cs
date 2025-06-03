@@ -45,6 +45,9 @@ class Program
             Console.WriteLine(k.SkrivUtInfo());
         }
         
+        Console.WriteLine(student.SkrivUtGjennomsnitt());
+        Console.WriteLine(student2.SkrivUtGjennomsnitt());
+        
 
     }
 }

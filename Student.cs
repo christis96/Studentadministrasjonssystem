@@ -26,4 +26,34 @@ public class Student
     {
         Karakterer.Add(karakter);
     }
+
+    public string SkrivUtGjennomsnitt()
+         {
+             if (Karakterer == null || Karakterer.Count == 0)
+                 return "Ingen karakterer";
+
+             Dictionary<string, int> bokstavTilTall = new Dictionary<string, int>
+             {
+                 { "A", 6 },
+                 { "B", 5 },
+                 { "C", 4 },
+                 { "D", 3 },
+                 { "E", 2 },
+                 { "F", 1 }
+             };
+             Dictionary<int, string> tallTilBokstav = new Dictionary<int, string>
+             {
+                 { 6, "A" },
+                 { 5, "B" },
+                 { 4, "C" },
+                 { 3, "D" },
+                 { 2, "E" },
+                 { 1, "F" }
+             };
+
+             double gjennomsnitt = Karakterer.Average(k => bokstavTilTall[k.Karakterbokstav]);
+             int avrundet = (int)Math.Round(gjennomsnitt);  
+
+             return tallTilBokstav[avrundet];
+         }
 }
